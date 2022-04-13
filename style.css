@@ -248,7 +248,33 @@ body {
 .col-1-of-4 li a:hover{
     color: rgb(91, 85, 95);;
 }
-
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    color: white;
+  }
+  .fa-twitter{
+      color: white;
+  }
 @keyframes moveInLeft {
     0% {
         opacity: 0;
