@@ -35,13 +35,14 @@ body {
     background-position: top;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    z-index: -1;
 }
+
 .navbar {
     border-bottom-style: outset;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: 0 0 5px grey;
-    z-index: 5;
 }
 
 .navbar-brand {
@@ -58,13 +59,13 @@ body {
 .navbar li {
     padding: 0.8rem;
 }
-
 .header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
+    
 }
 
 .heading-primary {
@@ -81,11 +82,13 @@ body {
     letter-spacing: 0.8rem;
     animation: moveInLeft 2s;
 }
+
 .heading-primary--sub {
     display: block;
     letter-spacing: 0.2rem;
     animation: moveInRight 2s;
 }
+
 .btn {
     padding: 2rem 4rem;
     border-radius: 6rem;
@@ -93,13 +96,16 @@ body {
     display: inline-block;
     font-size: 1.5rem;
 }
+
 .btn--white {
     background-color: white;
-    color:  rgb(109, 109, 109);
+    color: rgb(109, 109, 109);
 }
-.btn--animated{
+
+.btn--animated {
     animation: moveInUp 2s
 }
+
 .btn:hover {
     transform: translateY(-.3rem);
     transition: all .2s;
@@ -110,28 +116,22 @@ body {
     transform: translateY(-.1rem);
     transition: all .2s;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}.about{
+}
+
+.about {
     position: relative;
 }
-.bg-video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-    object-fit: cover;
 
-}
-.about__content{
+
+.about__content {
     text-align: center;
     background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
-    background-color: rgba(225, 225, 225, 0.556);
+    background-color: rgb(225, 225, 225);
     margin-top: -10vh;
     height: 100vh;
-    z-index: 1;
 }
-.about__content .about__content__heading{
+
+.about__content .about__content__heading {
     margin-top: 15rem;
     color: #777;
     font-size: 3.5rem;
@@ -140,10 +140,11 @@ body {
     background-image: linear-gradient(to right bottom, rgba(17, 17, 17, 0.624), rgba(70, 53, 21, 0.823));
     -webkit-background-clip: text;
     color: transparent;
-    
-    
+
+
 }
-.about__content .about__content__text{
+
+.about__content .about__content__text {
     font-size: 2rem;
     color: rgb(109, 109, 109);
     padding: 0 16rem;
@@ -155,29 +156,31 @@ body {
     text-align: center;
     margin-top: 12rem;
     margin-bottom: 15rem;
-    
+
 }
 
 .gallery h2 {
     display: inline-block;
     font-size: 3.5rem;
-    
+
 }
-.heading--underline{
+
+.heading--underline {
     margin: auto;
     width: 8rem;
     border-bottom: 2px solid #777;
     margin-bottom: 10rem;
-    
-    
+
+
 }
+
 /* .heading--underline:hover{
     animation: wiggle 1s;
     animation-iteration-count: infinite;
 } */
 
 
-.img-row{
+.img-row {
     max-width: 80vw;
     margin: 0 auto;
     padding: 2rem;
@@ -190,27 +193,60 @@ body {
     border-radius: 3rem;
     /* outline-offset: 0.5rem; */
 }
-.img-row::after{
+
+.img-row::after {
     content: "";
     display: table;
     clear: both;
 }
-.img-row__food img:hover{
+
+.img-row__food img:hover {
     transform: scale(1.1);
     transition: ease-in 200ms;
     outline: 1rem solid #777;
     border-radius: 3rem;
     box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.4);
 }
-.contact{
+
+.contact {
     height: 60vh;
-    background-color: #221e43;
+    background-color: #0f0d27;
 }
-.row{
+
+.row {
     max-width: 114rem;
-    margin: 0 auto;
-    width: calc((100% - 3 * 20px)/4);
+    margin: 5% auto;
     float: left;
+}
+
+.row .col-1-of-4 {
+    /* width: calc((100% - 3 * 1rem)/4); */
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.row .col-1-of-4 h5 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.col-1-of-4 li {
+    list-style: none;
+    margin-bottom: 1.25rem;
+    margin-left: -2rem;
+    
+}
+.col-1-of-4 li a {
+    text-decoration: none;
+    color: rgb(190, 187, 192);
+    font-size: 1.25rem;
+    font-weight: 100;
+    
+
+}
+.col-1-of-4 li a:hover{
+    color: rgb(91, 85, 95);;
 }
 
 @keyframes moveInLeft {
@@ -249,15 +285,18 @@ body {
         transform: translateX(-20px);
     }
 }
+
 @keyframes wiggle {
-    0%{
+    0% {
         transform: translateX(-2rem);
     }
-    50%{
+
+    50% {
         transform: translate(-5rem);
     }
-    100%{
+
+    100% {
         transform: translate(2rem);
     }
-    
+
 }
