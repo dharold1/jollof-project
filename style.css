@@ -35,7 +35,6 @@ body {
     background-position: top;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
-    z-index: -1;
 }
 
 .navbar {
@@ -59,13 +58,14 @@ body {
 .navbar li {
     padding: 0.8rem;
 }
+
 .header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
-    
+
 }
 
 .heading-primary {
@@ -106,11 +106,11 @@ body {
     animation: moveInUp 2s
 }
 
-.btn:hover {
+/* .btn:hover {
     transform: translateY(-.3rem);
     transition: all .2s;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-}
+} */
 
 .btn:active {
     transform: translateY(-.1rem);
@@ -218,7 +218,8 @@ body {
     margin: 5% auto;
     float: left;
 }
-.row::after{
+
+.row::after {
     content: "";
     display: table;
     clear: both;
@@ -239,38 +240,45 @@ body {
     list-style: none;
     margin-bottom: 1.25rem;
     margin-left: -2rem;
-    
+
 }
+
 .col-1-of-4 li a {
     text-decoration: none;
     color: rgb(190, 187, 192);
     font-size: 1.25rem;
     font-weight: 100;
-    
+
 
 }
-.col-1-of-4 li a:hover{
-    color: rgb(91, 85, 95);;
+
+.col-1-of-4 li a:hover {
+    color: rgb(91, 85, 95);
+    ;
 }
+
 .fa {
     padding: 20px;
     font-size: 30px;
     width: 50px;
     text-align: center;
     text-decoration: none;
-  }
-  
-  /* Add a hover effect if you want */
-  .fab:hover {
+}
+
+/* Add a hover effect if you want */
+.fab:hover {
     opacity: 0.7;
-  }
-  .social li{
+}
+
+.social li {
     float: left;
     padding-left: 50px;
-  }
- .social li:first-child{
-     padding-left: 0px;
- }
+}
+
+.social li:first-child {
+    padding-left: 0px;
+}
+
 @keyframes moveInLeft {
     0% {
         opacity: 0;
