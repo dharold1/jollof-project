@@ -264,22 +264,13 @@ body {
   .fab:hover {
     opacity: 0.7;
   }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-facebook {
-    /* color: white; */
+  .social li{
+    float: left;
+    padding-left: 50px;
   }
-  
-  /* Twitter */
-  .fa-twitter {
-    /* color: white; */
-  }
-  /* WhatsApp */
-  .fa-whatsapp{
-      /* color: white; */
-  }
+ .social li:first-child{
+     padding-left: 0px;
+ }
 @keyframes moveInLeft {
     0% {
         opacity: 0;
