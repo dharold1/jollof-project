@@ -18,12 +18,14 @@ html {
 }
 
 body {
-    font-family: 'lato', sans-serif;
+    font-family: 'sans-serif', 'lato';
     font-weight: 400;
     line-height: 1.7;
-    color: white;
 }
-
+h2{
+    font-family: 'jokerman';
+    color: black;
+}
 .logo-img {
     max-height: 300px;
 }
@@ -51,11 +53,10 @@ body {
 /* ================================HEADER ======================================= */
 .header {
     height: 100vh;
-    background-image: linear-gradient(to right bottom, rgba(17, 17, 17, 0.624), rgba(70, 53, 21, 0.823));
+    background-image: linear-gradient(to right bottom, rgba(152, 116, 30, 0.624), rgba(163, 87, 11, 0.823));
     background-size: cover;
     background-position: top;
     position: relative;
-    animation: slideShow 20s infinite;
 }
 .index{
     z-index: -1;
@@ -73,22 +74,28 @@ header::after{
 }
 
 .heading-primary {
-    color: white;
+    color: rgb(5, 0, 0);
     animation: forwards;
     margin-bottom: 6rem;
+    /* background: linear-gradient(to right, #151515, #ffffff, #69605a, #000000, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
 }
 
 .heading-primary--main {
     display: block;
-    font-size: 4rem;
+    font-size: 6rem;
     text-transform: uppercase;
-    font-weight: 400;
+    font-family: 'jokerman';
+    font-weight: 900;
     letter-spacing: 0.8rem;
     animation: moveInLeft 2s;
 }
 
 .heading-primary--sub {
     display: block;
+    font-family: 'sans-serif';
+    font-weight: 700;
     letter-spacing: 0.2rem;
     animation: moveInRight 2s;
 }
@@ -102,19 +109,19 @@ header::after{
 }
 
 .btn--white {
-    background-color: white;
-    color: rgb(109, 109, 109);
+    background-color: rgb(255, 255, 255);
+    color: rgb(58, 41, 8)
 }
 
 .btn--animated {
     animation: moveInUp 2s
 }
 
-/* .btn:hover {
+.btn:hover {
     transform: translateY(-.3rem);
     transition: all .2s;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-} */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.628);
+}
 
 .btn:active {
     transform: translateY(-.1rem);
@@ -133,25 +140,22 @@ header::after{
 
 .about__content .about__content__heading {
     margin-top: 15rem;
-    color: #777;
     font-size: 3.5rem;
     font-weight: 700;
     display: inline-block;
-    background-image: linear-gradient(to right bottom, rgba(17, 17, 17, 0.624), rgba(70, 53, 21, 0.823));
+    /* background-image: linear-gradient(to right bottom, rgba(17, 17, 17, 0.624), rgba(70, 53, 21, 0.823));
     -webkit-background-clip: text;
-    color: transparent;
+    color: transparent; */
 
 
 }
 
 .about__content .about__content__text {
     font-size: 2rem;
-    color: rgb(109, 109, 109);
     padding: 0 16rem;
 }
 /* ===========================GALLERY CSS ==================================== */
 .gallery {
-    color: #777;
     height: 100vh;
     text-align: center;
     margin-top: 12rem;
@@ -165,7 +169,7 @@ header::after{
 .heading--underline {
     margin: auto;
     width: 8rem;
-    border-bottom: 2px solid #777;
+    border-bottom: 2px solid rgb(0, 0, 0);
     margin-bottom: 10rem;
 }
 
@@ -197,7 +201,7 @@ header::after{
 .img-row__food img:hover {
     transform: scale(1);
     transition: ease-in 200ms;
-    outline: 0.5rem solid #777;
+    outline: 0.5rem solid rgb(0, 0, 0);
     border-radius: 3rem;
     box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.4);
 }
