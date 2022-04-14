@@ -7,7 +7,10 @@
     font-family: monoton;
     src: url(../fonts/monoton/Monoton-Regular.ttf);
 }
-
+@font-face {
+    font-family: jokerman;
+    src: url(../fonts/Jokerman-Font/Jokerman\ Font.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -154,7 +157,7 @@ header::after{
     font-size: 2rem;
     padding: 0 16rem;
 }
-/* ===========================GALLERY CSS ==================================== */
+/* =======/====================GALLERY CSS ==================================== */
 .gallery {
     height: 100vh;
     text-align: center;
