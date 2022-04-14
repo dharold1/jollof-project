@@ -117,12 +117,10 @@ body {
     transition: all .2s;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
-
+/* ========================ABOUT CSS============== */
 .about {
     position: relative;
 }
-
-
 .about__content {
     text-align: center;
     background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
@@ -149,7 +147,7 @@ body {
     color: rgb(109, 109, 109);
     padding: 0 16rem;
 }
-
+/* ===========================GALLERY CSS ==================================== */
 .gallery {
     color: #777;
     height: 100vh;
@@ -158,27 +156,21 @@ body {
     margin-bottom: 15rem;
 
 }
-
 .gallery h2 {
     display: inline-block;
     font-size: 3.5rem;
-
 }
-
 .heading--underline {
     margin: auto;
     width: 8rem;
     border-bottom: 2px solid #777;
     margin-bottom: 10rem;
-
-
 }
 
 /* .heading--underline:hover{
     animation: wiggle 1s;
     animation-iteration-count: infinite;
 } */
-
 
 .img-row {
     max-width: 80vw;
@@ -201,31 +193,28 @@ body {
 }
 
 .img-row__food img:hover {
-    transform: scale(1.1);
+    transform: scale(1);
     transition: ease-in 200ms;
-    outline: 1rem solid #777;
+    outline: 0.5rem solid #777;
     border-radius: 3rem;
     box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.4);
 }
 
+/* ==============================CONTACT===================================== */
 .contact {
     height: 60vh;
     background-color: #0f0d27;
 }
-
 .row {
     max-width: 114rem;
     margin: 5% auto;
     float: left;
 }
-
 .row::after {
     content: "";
     display: table;
     clear: both;
-
 }
-
 .row .col-1-of-4 {
     /* width: calc((100% - 3 * 1rem)/4); */
     width: 28rem;
@@ -242,21 +231,15 @@ body {
     margin-left: -2rem;
 
 }
-
 .col-1-of-4 li a {
     text-decoration: none;
     color: rgb(190, 187, 192);
     font-size: 1.25rem;
     font-weight: 100;
-
-
 }
-
 .col-1-of-4 li a:hover {
     color: rgb(91, 85, 95);
-    ;
 }
-
 .fa {
     padding: 20px;
     font-size: 30px;
