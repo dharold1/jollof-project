@@ -1,11 +1,11 @@
 @font-face {
     font-family: lato;
-    src: url(assets/fonts/Lato/Lato-Black.ttf);
+    src: url(../fonts/Lato/Lato-Black.ttf);
 }
 
 @font-face {
     font-family: monoton;
-    src: url(assets/fonts/monoton/Monoton-Regular.ttf);
+    src: url(../fonts/monoton/Monoton-Regular.ttf);
 }
 
 * {
@@ -27,16 +27,6 @@ body {
 .logo-img {
     max-height: 300px;
 }
-
-.header {
-    height: 100vh;
-    background-image: linear-gradient(to right bottom, rgba(17, 17, 17, 0.624), rgba(70, 53, 21, 0.823)), url('assets/images/background.jpeg');
-    background-size: cover;
-    background-position: top;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
-}
-
 .navbar {
     border-bottom-style: outset;
     border-bottom-right-radius: 10px;
@@ -58,7 +48,21 @@ body {
 .navbar li {
     padding: 0.8rem;
 }
-
+/* ================================HEADER ======================================= */
+.header {
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, rgba(17, 17, 17, 0.624), rgba(70, 53, 21, 0.823));
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    animation: slideShow 20s infinite;
+}
+.index{
+    z-index: -1;
+}
+header::after{
+    animation: fade 2s;
+}
 .header__text-box {
     position: absolute;
     top: 50%;
@@ -114,7 +118,6 @@ body {
 
 .btn:active {
     transform: translateY(-.1rem);
-    transition: all .2s;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 /* ========================ABOUT CSS============== */
@@ -125,7 +128,6 @@ body {
     text-align: center;
     background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
     background-color: rgb(225, 225, 225);
-    margin-top: -10vh;
     height: 100vh;
 }
 
@@ -260,6 +262,9 @@ body {
 
 .social li:first-child {
     padding-left: 0px;
+}
+.fade--effect{
+    animation: fade 1.5s;
 }
 
 @keyframes moveInLeft {
