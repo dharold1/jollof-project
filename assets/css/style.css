@@ -287,7 +287,11 @@ header::after{
     float: left;
     padding-left: 50px;
 }
-
+.social li::after{
+    content: "";
+    display: table;
+    clear: both;
+}
 .social li:first-child {
     padding-left: 0px;
 }
