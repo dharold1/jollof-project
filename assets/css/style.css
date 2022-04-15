@@ -27,22 +27,35 @@ body {
 }
 h2{
     font-family: 'jokerman';
-    color: black;
-}
-.logo-img {
-    max-height: 300px;
+    color:  rgb(64, 63, 63);
 }
 .navbar {
-    border-bottom-style: outset;
+    border: none;
+    /* border-bottom-style: outset;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    box-shadow: 0 0 5px grey;
+    box-shadow: 0 0 5px grey; */
 }
 
 .navbar-brand {
     font-size: 4rem;
     font-family: 'monoton', sans-serif;
-    ;
+    font-weight: 600;
+     background:linear-gradient(to right bottom, rgb(251, 144, 5),rgb(165, 165, 165));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.brand{
+    text-align: center;
+}
+.navbrand-sub{
+    margin-top: -15px;
+    font-family: 'monoton';
+    font-weight: 700;
+    font-size: 2rem;
+    background: linear-gradient(to right bottom, rgba(251, 144, 5, 0.652),rgba(165, 165, 165, 0.841));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 #navbarNav ul {
@@ -52,11 +65,20 @@ h2{
 
 .navbar li {
     padding: 0.8rem;
+    background:linear-gradient(to right bottom, rgb(251, 144, 5),rgb(102, 102, 102));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+}
+.navbar li:hover, .navbar li:active {
+    background:linear-gradient(to right bottom, rgb(88, 50, 0),rgb(53, 53, 53));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 /* ================================HEADER ======================================= */
 .header {
     height: 100vh;
-    background-image: linear-gradient(to right bottom, rgba(152, 116, 30, 0.624), rgba(163, 87, 11, 0.823));
+    background-image: linear-gradient(to left top, rgba(251, 144, 5, 0.624),rgba(43, 35, 113, 0.823));
     background-size: cover;
     background-position: top;
     position: relative;
@@ -77,12 +99,10 @@ header::after{
 }
 
 .heading-primary {
-    color: rgb(5, 0, 0);
+    color: rgb(255, 230, 0);
     animation: forwards;
     margin-bottom: 6rem;
-    /* background: linear-gradient(to right, #151515, #ffffff, #69605a, #000000, #eedd44);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text; */
+   
 }
 
 .heading-primary--main {
@@ -111,8 +131,8 @@ header::after{
     font-size: 1.5rem;
 }
 
-.btn--white {
-    background-color: rgb(255, 255, 255);
+.btn--color {
+    background-color: rgb(232, 232, 232);
     color: rgb(58, 41, 8)
 }
 
@@ -137,7 +157,7 @@ header::after{
 .about__content {
     text-align: center;
     background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
-    background-color: rgb(225, 225, 225);
+    background-color: rgb(164, 141, 14);
     height: 100vh;
 }
 
@@ -163,7 +183,6 @@ header::after{
     text-align: center;
     margin-top: 12rem;
     margin-bottom: 15rem;
-
 }
 .gallery h2 {
     display: inline-block;
@@ -172,7 +191,7 @@ header::after{
 .heading--underline {
     margin: auto;
     width: 8rem;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(64, 63, 63);
     margin-bottom: 10rem;
 }
 
@@ -212,7 +231,8 @@ header::after{
 /* ==============================CONTACT===================================== */
 .contact {
     height: 60vh;
-    background-color: #0f0d27;
+    background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
+    background-color: rgb(164, 141, 14);
 }
 .row {
     max-width: 114rem;
@@ -232,6 +252,7 @@ header::after{
 .row .col-1-of-4 h5 {
     font-size: 2rem;
     font-weight: 500;
+    color:  rgb(56, 56, 56);
 }
 
 .col-1-of-4 li {
@@ -242,12 +263,12 @@ header::after{
 }
 .col-1-of-4 li a {
     text-decoration: none;
-    color: rgb(190, 187, 192);
+    color:  rgba(64, 63, 63, 0.857);
     font-size: 1.25rem;
     font-weight: 100;
 }
 .col-1-of-4 li a:hover {
-    color: rgb(91, 85, 95);
+    color:  rgb(28, 27, 27);
 }
 .fa {
     padding: 20px;
