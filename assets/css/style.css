@@ -7,10 +7,12 @@
     font-family: monoton;
     src: url(../fonts/monoton/Monoton-Regular.ttf);
 }
+
 @font-face {
     font-family: jokerman;
     src: url(../fonts/Jokerman-Font/Jokerman\ Font.ttf);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +20,7 @@
 
 html {
     font-size: 62.5%;
+    /* 1rem=10px 10px/16px*100 =62.5% */
 }
 
 body {
@@ -25,37 +28,33 @@ body {
     font-weight: 400;
     line-height: 1.7;
 }
-h2{
+
+h2 {
     font-size: 3rem;
     font-family: 'jokerman';
-    color:  rgb(64, 63, 63);
-}
-.navbar {
-    border: none;
-    /* border-bottom-style: outset;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 0 0 5px grey; */
+    color: rgb(64, 63, 63);
 }
 
 .navbar-brand {
     font-size: 2.8rem;
     font-family: 'monoton', sans-serif;
     font-weight: 600;
-     background:linear-gradient(to right bottom, rgb(251, 144, 5),rgb(165, 165, 165));
+    background: linear-gradient(to right bottom, rgb(251, 144, 5), rgb(165, 165, 165));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
-.brand{
+
+.brand {
     text-align: center;
     margin: 1rem;
 }
-.navbrand-sub{
-    margin-top: -15px;
+
+.navbrand-sub {
+    margin-top: -1.5rem;
     font-family: 'monoton';
     font-weight: 700;
     font-size: 2rem;
-    background: linear-gradient(to right bottom, rgba(251, 144, 5, 0.652),rgba(165, 165, 165, 0.841));
+    background: linear-gradient(to right bottom, rgba(251, 144, 5, 0.652), rgba(165, 165, 165, 0.841));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -67,36 +66,55 @@ h2{
 
 .navbar li {
     padding: 0.8rem;
-    background:linear-gradient(to right bottom, rgb(251, 144, 5),rgb(102, 102, 102));
+    background: linear-gradient(to right bottom, rgb(251, 144, 5), rgb(102, 102, 102));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    
+
 }
+
 .navbar li:hover, .navbar li:active {
-    background:linear-gradient(to right bottom, rgb(88, 50, 0),rgb(53, 53, 53));
+    background: linear-gradient(to right bottom, rgb(88, 50, 0), rgb(53, 53, 53));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
+/* ==========================ROW GRID MANAGEMENT ======================================== */
+.row {
+    max-width: 114rem;
+    margin: auto;
+    float: left;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* ================================HEADER ======================================= */
 .header {
-    height: 100vh;
-    background-image: linear-gradient(to left top, rgba(251, 144, 5, 0.624),rgba(43, 35, 113, 0.823));
+    min-height: 100vh;
+    background-image: linear-gradient(to left top, rgba(251, 144, 5, 0.624), rgba(43, 35, 113, 0.823));
     background-size: cover;
     background-position: top;
     position: relative;
 }
-.index{
+
+.index {
     z-index: -1;
 }
-header::after{
+
+header::after {
     animation: fade 2s;
 }
+
 .header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
+    max-height: 100vh;
 
 }
 
@@ -104,7 +122,7 @@ header::after{
     color: rgb(255, 230, 0);
     animation: forwards;
     margin-bottom: 6rem;
-   
+
 }
 
 .heading-primary--main {
@@ -125,7 +143,7 @@ header::after{
     animation: moveInRight 2s;
 }
 
-.btn {
+.button {
     padding: 2rem 4rem;
     border-radius: 6rem;
     text-decoration: none;
@@ -142,87 +160,119 @@ header::after{
     animation: moveInUp 2s
 }
 
-.btn:hover {
+.button:hover {
     transform: translateY(-.3rem);
     transition: all .2s;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.628);
+    color: black;
 }
 
-.btn:active {
+.button:active {
     transform: translateY(-.1rem);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
 }
+
+/* ===============Carousel==================== */
+.carousel-item img {
+    height: 100vh;
+}
+
 /* ========================ABOUT CSS============== */
 .about {
     position: relative;
-}
-.about__content {
-    text-align: center;
+    min-height: 100vh;
     background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
     background-color: rgb(164, 141, 14);
-    height: 90vh;
+}
+
+.about__content {
+    position: absolute;
+    top: 15%;
+    text-align: center;  
 }
 
 .about__content .about__content__heading {
-    margin-top: 15rem;
+    margin-top: 10rem;
     font-size: 3.5rem;
     font-weight: 700;
     display: inline-block;
 }
 
 .about__content .about__content__text {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 0 16rem;
 }
-/* =======/====================GALLERY CSS ==================================== */
-.gallery {
+
+/* =======/====================MENU CSS ==================================== */
+.menu {
+    margin-top: 10rem;
     height: 100vh;
     text-align: center;
-    margin-top: 12rem;
     margin-bottom: 15rem;
+    /* position: relative; */
 }
-.gallery h2 {
+
+.menu__container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+
+.menu h2 {
     display: inline-block;
     font-size: 3.5rem;
 }
+
+.menu_row {
+    margin-bottom: 2rem;
+}
+
+/* ================Card======================== */
+.card {
+    height: 30rem;
+    box-shadow: 0.1rem 0.1rem 1rem 0.5rem rgba(64, 63, 63, 0.612);
+    width: 23rem;
+}
+
+.card img {
+    height: 18rem;
+}
+
+.card-body, .list-group-item {
+    text-align: start;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+}
+
+.card-body p {
+    font-size: 1.3rem;
+}
+
+.card:hover {
+    transform: scale(1);
+    transition: ease-in 200ms;
+    outline: 0.2rem solid rgb(64, 63, 63);
+    ;
+    box-shadow: 0.2rem 0.2rem 2rem 1rem rgb(64, 63, 63);
+}
+
+.btn--color2 {
+    background-color: #bb9b3d;
+    border-color: #312910ec;
+}
+
+.btn--color2:hover, .btn--color2:active {
+    background-color: #4f4014;
+    border-color: #161207ec;
+}
+
 .heading--underline {
     margin: auto;
     width: 8rem;
-    border-bottom: 2px solid rgb(64, 63, 63);
-    margin-bottom: 10rem;
-}
-
-/* .heading--underline:hover{
-    animation: wiggle 1s;
-    animation-iteration-count: infinite;
-} */
-
-.img-row {
-    max-width: 80vw;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.img-row__food img {
-    padding: 2.5rem;
-    width: 30%;
-    float: left;
-    border-radius: 3rem;
-    /* outline-offset: 0.5rem; */
-}
-
-.img-row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.img-row__food img:hover {
-    transform: scale(1);
-    transition: ease-in 200ms;
-    outline: 0.5rem solid rgb(64, 63, 63);;
-    border-radius: 3rem;
-    box-shadow: 2px 2px 20px 10px rgb(64, 63, 63);;
+    border-bottom: .2rem solid rgb(64, 63, 63);
+    margin-bottom: 2rem;
 }
 
 /* ==============================CONTACT===================================== */
@@ -230,17 +280,13 @@ header::after{
     height: 60vh;
     background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
     background-color: rgb(164, 141, 14);
+    position: relative;
 }
-.row {
-    max-width: 114rem;
-    margin: 5% auto;
-    float: left;
+
+.contact__row {
+    margin-top: 3%;
 }
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
 .row .col-1-of-4 {
     /* width: calc((100% - 3 * 1rem)/4); */
     width: 28rem;
@@ -249,7 +295,7 @@ header::after{
 .row .col-1-of-4 h5 {
     font-size: 2rem;
     font-weight: 500;
-    color:  rgb(56, 56, 56);
+    color: rgb(56, 56, 56);
 }
 
 .col-1-of-4 li {
@@ -258,19 +304,22 @@ header::after{
     margin-left: -2rem;
 
 }
+
 .col-1-of-4 li a {
     text-decoration: none;
-    color:  rgba(64, 63, 63, 0.857);
+    color: rgba(64, 63, 63, 0.857);
     font-size: 1.4rem;
     font-weight: 100;
 }
+
 .col-1-of-4 li a:hover {
-    color:  rgb(28, 27, 27);
+    color: rgb(28, 27, 27);
 }
+
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
+    padding: 2rem;
+    font-size: 3rem;
+    width: 5rem;
     text-align: center;
     text-decoration: none;
 }
@@ -279,23 +328,27 @@ header::after{
 .fab:hover {
     opacity: 0.7;
 }
-.contact__social{
-    margin-top: 20px;
+
+.contact__social {
+    margin-top: 2rem;
 }
 
 .social li {
     float: left;
-    padding-left: 50px;
+    padding-left: 5rem;
 }
-.social li::after{
+
+.social li::after {
     content: "";
     display: table;
     clear: both;
 }
+
 .social li:first-child {
     padding-left: 0px;
 }
-.fade--effect{
+
+.fade--effect {
     animation: fade 1.5s;
 }
 
@@ -332,7 +385,7 @@ header::after{
 
     100% {
         opacity: 1;
-        transform: translateX(-20px);
+        transform: translateX(-2rem);
     }
 }
 
@@ -348,5 +401,172 @@ header::after{
     100% {
         transform: translate(2rem);
     }
+
+}
+
+
+/* ========================MEDIA QUERIES============================= */
+
+@media (max-width: 75em) {
+
+    /*landscape tablet */
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 56.25em) {
+
+    /*potrait tablet*/
+    html {
+        font-size: 50%;
+    }
+    .heading-primary--main {
+        font-size: 8rem;
+    }
+
+    .heading-primary--sub {
+        font-size: 5rem;
+    }
+    .about__content .about__content__heading {
+        margin-top: 10rem;
+        font-size: 4rem;
+        font-weight: 700;
+        display: inline-block;
+    }
+    
+    .about__content .about__content__text {
+        font-size: 3rem;
+        padding: 0 16rem;
+    }/* =======/====================MENU CSS ==================================== */
+    .menu {
+        height: 100vh;
+        margin-top: 2rem;
+        margin-bottom: 15rem;
+        /* position: relative; */
+    }
+    .menu__container {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .menu h2 {
+        display: inline-block;
+        font-size: 4rem;
+    }
+
+   
+    /* ================Card======================== */
+
+    .card {
+        box-shadow: 0.1rem 0.1rem 1rem 0.5rem rgba(64, 63, 63, 0.612);
+        height: 35rem;
+        width: 30rem;
+        margin: auto;
+        margin-bottom: 5rem;
+    }
+
+    .card img {
+        height: 15rem;
+    }
+
+    .card-body h5 {
+        font-size: 2.5rem;
+    }
+
+    .card-body p {
+        font-size: 2.5rem;
+    }
+
+    .card:hover {
+        transform: scale(1);
+        transition: ease-in 200ms;
+        outline: 0.2rem solid rgb(64, 63, 63);
+        box-shadow: 0.2rem 0.2rem 2rem 1rem rgb(64, 63, 63);
+    }
+
+    .btn--color2 {
+        background-color: #bb9b3d;
+        border-color: #312910ec;
+        font-size: 2rem;
+    }
+
+    .btn--color2:hover, .btn--color2:active {
+        background-color: #4f4014;
+        border-color: #161207ec;
+    }
+
+    .heading--underline {
+        margin: auto;
+        width: 10rem;
+        border-bottom: .2rem solid rgb(64, 63, 63);
+        margin-bottom: 2rem;
+    }
+      /* ==============================CONTACT===================================== */
+      .contact {
+        height: 30vh;
+        background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
+        background-color: rgb(164, 141, 14);
+        position: relative;
+    }
+
+    .contact__row {
+        margin-top: 3%;
+    }
+
+}
+
+@media (max-width: 37.5em) {
+    /*phone */
+
+    /* 600px to ems dedault font size is usually 16 so we do 600/16 */
+    html {
+        font-size: 30%;
+    }
+
+    .navbar li {
+        font-size: 2.5rem;
+    }
+
+    .header {}
+
+    .heading-primary--main {
+        font-size: 8rem;
+    }
+
+    .heading-primary--sub {
+        font-size: 5rem;
+    }
+
+    .button {
+        padding: 4rem 8rem;
+        border-radius: 6rem;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 2rem;
+    }
+
+    /* ========================ABOUT PHONE VERSION CSS============== */
+    .about__content {
+        position: absolute;
+        top: 12%;
+        text-align: center;
+        max-height: 100vh;
+    }
+    .about__content .about__content__heading {
+        font-size: 5rem;
+    }
+
+    .about__content .about__content__text {
+        font-size: 3.7rem;
+        padding: 0 16rem;
+    }
+    .menu{
+        height: 80vh;
+    }
+
+    
+  
 
 }
