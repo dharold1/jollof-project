@@ -514,6 +514,12 @@ header::after {
     .contact__row {
         margin-top: 3%;
     }
+    .col-1-of-4 li a {
+        text-decoration: none;
+        color: rgba(40, 39, 39, 0.922);
+        font-size: 2rem;
+        font-weight: 100;
+    }
 
 }
 
