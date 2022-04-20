@@ -351,7 +351,97 @@ header::after {
 .fade--effect {
     animation: fade 1.5s;
 }
+.cart-btn{
+    position: fixed;
+    bottom: 6.5rem;
+    right: 6.5rem;
+    z-index: 5;
+    border: 1px solid gray;
+    background-color: gray;
+    padding: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1rem 1rem .1rem rgba(0, 0, 0, 0.293);
+}
+.cart-btn:hover{
+    box-shadow: 0 1rem 1rem .1rem rgba(0, 0, 0, 0.718);
+}
+.cart-icon{
+    height: 6rem;
+    width: 6rem;
+}
 
+.close-modal{
+    position: absolute;
+    font-size: 5rem;
+    border: none;
+    background: none;
+    top: -1.5rem;
+    right: 1rem;
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+}
+.close-modal:hover{
+    color: black;
+}
+.order-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background-color: rgb(220, 219, 219);
+    padding: 6rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+.order-card{
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.5fr;
+    padding: 1rem 1rem;
+    gap: 5px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 2rem;
+}
+.order-img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 15px;
+}
+.order-detail i{
+     display: block;
+     font-size: 15px;
+     font-weight: 900;
+}
+.order-detail p{
+    font-size: 1.5rem;
+}
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.692);
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+#overlay:target{
+    opacity: 1;
+    visibility: visible;
+
+}
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
 @keyframes moveInLeft {
     0% {
         opacity: 0;
