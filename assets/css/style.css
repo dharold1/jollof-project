@@ -370,6 +370,10 @@ header::after {
     height: 6rem;
     width: 6rem;
 }
+.cart-title{
+    font-size: 2rem;
+    text-align: center;
+}
 
 .close-modal{
     position: absolute;
@@ -389,36 +393,43 @@ header::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 50%;
     background-color: rgb(220, 219, 219);
     padding: 6rem;
     border-radius: 5px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
     z-index: 10;
+    max-height: 50%;
+    overflow-y: scroll;
 }
 .order-card{
     display: grid;
     grid-template-columns: 0.6fr 1fr 0.5fr;
-    padding: 1rem 1rem;
-    gap: 5px;
+    padding: 1rem 2rem;
+    gap: .5rem;
     justify-content: space-around;
     align-items: flex-start;
     background-color: white;
     border-radius: 2rem;
 }
 .order-img{
-    width: 70px;
-    height: 70px;
+    width: 7rem;
+    height: 7rem;
     object-fit: cover;
-    border: 15px;
+    border: 1.5rem;
 }
 .order-detail i{
      display: block;
-     font-size: 15px;
+     font-size: 1.5rem;
      font-weight: 900;
 }
 .order-detail p{
     font-size: 1.5rem;
+}
+.checkout{
+    position: static;
+    float: right;
+
 }
 #overlay{
     position: fixed;
@@ -427,7 +438,7 @@ header::after {
     background-color: rgba(0, 0, 0, 0.692);
     height: 100vh;
     width: 100%;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(.3rem);
     z-index: 5;
     opacity: 0;
     visibility: hidden;

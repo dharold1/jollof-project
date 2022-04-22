@@ -103,15 +103,18 @@
         <div class="overlay" id="overlay">
             <div class="order-modal">
                 <a class="close-modal" href="#menu">&times;</a>
-                <div class="order-card"><img class="order-img" src="./assets/images/order/food (7).jpeg" alt=""
+                <div class="cart-title">FOOD CART</div>
+                <div class="cart-container">
+                <!-- <div class="order-card"><img class="order-img" src="./assets/images/order/food (7).jpeg" alt=""
                         srcset="">
                     <div class="order-detail">
                         <p>Jollof Rice and Fish</p>
-                        <i class="fas fa-times"></i> <input type="number" value="2">
+                        <i class="fas fa-times"></i> <input type="number" value="1">
                     </div>
                     <h4 class="order-price">#1500</h4>
-                </div>
-
+                </div> -->
+            </div>
+            <a href="#" class="btn btn--color2 checkout">Proceed to Checkout</a>
             </div>
         </div>
         <!-- =====================================ORDER CENTER======================== -->
@@ -121,39 +124,39 @@
             <div class="container menu__container">
                 <div class="row menu_row">
                     <div class="col">
-                        <div class="card">
+                        <div class="card" id="item1">
                             <img src="./assets/images/order/food (7).jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Jollof Rice & Fish</h5>
                                 <p class="card-text">#1500</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"> <a href="#" class="btn btn--color2">Add to Cart</a></li>
+                                <li class="list-group-item"> <a href="#" class="btn btn--color2" onclick="addTocart(item1)">Add to Cart</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card">
+                        <div class="card" id="item2">
                             <img src="./assets/images/order/food (10).jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Jollof Rice & Plantain</h5>
                                 <p class="card-text">#1000</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"> <a href="#" class="btn btn--color2">Add to Cart</a></li>
+                                <li class="list-group-item"> <a href="#" class="btn btn--color2" onclick="addTocart(item2)">Add to Cart</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card">
+                        <div class="card" id="item3">
                             <img src="./assets/images/order/food (6).jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Jollof Rice & Chicken </h5>
                                 <p class="card-text">#2000</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"> <a href="#" class="btn btn--color2">Add to Cart</a></li>
+                                <li class="list-group-item"> <a href="#" class="btn btn--color2" onclick="addTocart(item3)">Add to Cart</a></li>
                             </ul>
                         </div>
                     </div>
@@ -161,39 +164,39 @@
 
                 <div class="row menu_row">
                     <div class="col">
-                        <div class="card">
+                        <div class="card" id="item4">
                             <img src="./assets/images/order/food2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Jollof Rice, Plantain & Chicken</h5>
                                 <p class="card-text">#2500</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"> <a href="#" class="btn btn--color2">Add to Cart</a></li>
+                                <li class="list-group-item"> <a href="#" class="btn btn--color2" onclick="addTocart(item4)">Add to Cart</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card">
+                        <div class="card" id="item5">
                             <img src="./assets/images/order/bg (5).jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Coconut Jollof Rice</h5>
                                 <p class="card-text">#1500</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"> <a href="#" class="btn btn--color2">Add to Cart</a></li>
+                                <li class="list-group-item"> <a href="#" class="btn btn--color2" onclick="addTocart(item5)">Add to Cart</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card">
+                        <div class="card" id="item6">
                             <img src="./assets/images/order/food (02).jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Jollof Rice with Beef</h5>
                                 <p class="card-text">#1500</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"> <a href="#" class="btn btn--color2">Add to Cart</a></li>
+                                <li class="list-group-item"> <a href="#" class="btn btn--color2" onclick="addTocart(item6)">Add to Cart</a></li>
                             </ul>
                         </div>
                     </div>
@@ -264,6 +267,7 @@
         </div>
     </footer>
     <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/models/Cart.js"></script>
     <script src="./assets/js/bootstrap.js"></script>
 
 </body>
