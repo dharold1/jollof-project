@@ -1,0 +1,30 @@
+@font-face {
+    font-family: lato;
+    src: url(../fonts/Lato/Lato-Black.ttf);
+}
+
+@font-face {
+    font-family: monoton;
+    src: url(../fonts/monoton/Monoton-Regular.ttf);
+}
+
+@font-face {
+    font-family: jokerman;
+    src: url(../fonts/Jokerman-Font/Jokerman-Font.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem=10px 10px/16px*100 =62.5% */
+}
+
+body {
+    font-family: 'sans-serif', 'lato';
+    font-weight: 400;
+    line-height: 1.7;
+}

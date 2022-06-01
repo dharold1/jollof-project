@@ -1,0 +1,43 @@
+.button {
+    padding: 2rem 4rem;
+    border-radius: 6rem;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+
+    &:hover {
+        transform: translateY(-.3rem);
+        transition: all .2s;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.628);
+        color: black;
+    }
+
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+    }
+} 
+.btn--color {
+    background-color: rgb(232, 232, 232);
+    color: rgb(58, 41, 8)
+}
+
+.btn--animated {
+    animation: moveInUp 2s
+}
+
+.btn{
+    &--color2 {
+        background-color: #bb9b3d;
+        border-color: #312910ec;
+        &:hover {
+            background-color: #4f4014;
+            border-color: #161207ec;
+        }
+        &:active{
+            background-color: #29210b;
+            border-color: #020201ec;
+        }
+    }
+
+}

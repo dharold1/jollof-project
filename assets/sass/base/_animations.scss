@@ -1,0 +1,51 @@
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(2rem);
+    }
+}
+
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(2rem);
+    }
+
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-2rem);
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translateX(-2rem);
+    }
+
+    50% {
+        transform: translate(-5rem);
+    }
+
+    100% {
+        transform: translate(2rem);
+    }
+
+}

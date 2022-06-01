@@ -1,0 +1,232 @@
+/* 320px 320/16=20 em              nb 16px is the default font size we are dividing it by the media query size to convert to ems
+480px 480/16 = 30em
+600px 600/16 = 37.5em
+768px = 48em
+900px = 56.25em
+1024px = 64em
+1200px  = 75em
+1800px 112.5em
+*/
+
+@media screen and (max-width: 75em) {
+    html {
+        font-size: 58%;
+    }
+
+    .offcanvas-body ul {
+        font-size: 2rem;
+    }
+
+    /* ===================heading======================= */
+    .heading-primary {
+        min-width: 85vw;
+    }
+
+    .heading-primary--main {
+        font-size: 40px;
+        font-weight: 900;
+        letter-spacing: 10px;
+    }
+
+    .heading-primary--sub {
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        border-radius: 6rem;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 30px;
+    }
+
+    /* =======================about==================== */
+    .about {
+        position: relative;
+        min-height: 100vh;
+        background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
+        background-color: #a48d0e;
+    }
+
+    .about__content__heading {
+        margin-top: 10rem;
+        font-size: 4rem;
+        font-weight: 700;
+        display: inline-block;
+    }
+
+    .about__content__text {
+        font-size: 2.5rem;
+        padding: 0 16rem;
+    }
+
+    /* =======/====================MENU CSS ==================================== */
+    .menu {
+        text-align: center;
+        margin-bottom: 15rem;
+        /* position: relative; */
+    }
+
+    .menu__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 10rem;
+    }
+
+    .menu h2 {
+        display: inline-block;
+    }
+
+    .menu_row {
+        margin-bottom: 4rem;
+    }
+
+    /* ================Card======================== */
+    .card {
+        height: 35rem;
+        width: 23rem;
+        margin-right: 3rem;
+    }
+
+    .card-img {
+        height: 18rem;
+    }
+
+    .card-body h5 {
+        font-size: 1.8rem;
+    }
+
+    .card-body p {
+        font-size: 1.5rem;
+    }
+
+    .btn--color2 {
+        font-size: 1.8rem;
+    }
+
+    /* ==============================CONTACT===================================== */
+    .contact {
+        height: 40vh;
+    }
+
+    .contact__row {
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .col-1-of-4 h5 {
+        font-size: 1.7rem;
+    }
+
+    .col-1-of-4 li a {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 64em) {
+    .menu__container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .card {
+        box-shadow: 0.1rem 0.1rem 1rem 0.5rem rgba(64, 63, 63, 0.612);
+        height: 35rem;
+        width: 30rem;
+        margin: auto;
+        margin-bottom: 5rem;
+
+    }
+
+    .card img {
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 56.25em) {
+    html {}
+
+    .header {
+        -webkit-clip-path: circle(80rem at top left);
+        /* clip-path: polygon(1% 0%, 90% 0%, 0% 70%); */
+        background-image: linear-gradient(to left top, rgba(251, 144, 5, 0.57), rgba(43, 35, 113, 0.561)), url(../images/background.jpeg);
+        background-size: cover;
+        background-position: right;
+        position: relative;
+    }
+
+    .heading-primary {
+        min-width: 25vw;
+    }
+
+    .header__text-box {
+        position: absolute;
+        top: 32%;
+        left: 40%;
+        text-align: center;
+    }
+
+    .heading-primary--main {
+        font-size: 5rem;
+        letter-spacing: 0.8rem;
+    }
+
+    .heading-primary--sub {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .about__content__heading {
+        margin-top: 10rem;
+        font-size: 4rem;
+        font-weight: 700;
+        display: inline-block;
+    }
+
+    .about__content__text {
+        font-size: 2.5rem;
+        padding: 0 5rem;
+    }
+
+    .contact {
+        height: 60vh;
+    }
+    .contact__row {
+        /* margin-top: 3%; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+    @media screen and (max-width: 48em) {
+        html {}
+    }
+
+    @media screen and (max-width: 37.5em) {
+        html {
+            font-size: 45%;
+        }
+    }
+
+    @media screen and (max-width: 30em) {
+        html {}
+    }
+
+    @media screen and (max-width: 20em) {
+        html {}
+    }
+
+    @media screen and (min-width: 112.5em) {}
