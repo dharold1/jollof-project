@@ -1,4 +1,5 @@
-/* 320px 320/16=20 em              nb 16px is the default font size we are dividing it by the media query size to convert to ems
+/* 320px 320/16=20em              nb 16px is the default font size we are dividing it by the media query size to convert to ems
+432px 320/16=27em
 480px 480/16 = 30em
 600px 600/16 = 37.5em
 768px = 48em
@@ -217,12 +218,14 @@
 
     @media screen and (max-width: 37.5em) {
         html {
-            font-size: 45%;
+            font-size: 40%;
         }
     }
 
-    @media screen and (max-width: 30em) {
-        html {}
+    @media screen and (max-width: 27em) {
+        html {
+            font-size: 30%;
+        }
     }
 
     @media screen and (max-width: 20em) {
