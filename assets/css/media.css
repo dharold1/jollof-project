@@ -14,7 +14,7 @@
         font-size: 58%;
     }
     .header{
-        height: 55vh;
+        height: 50vh;
     }
 
     .offcanvas-body ul {
@@ -156,7 +156,7 @@
     html {}
 
     .header {
-        -webkit-clip-path: circle(80rem at top left);
+        /* -webkit-clip-path: circle(80rem at top left); */
         /* clip-path: polygon(1% 0%, 90% 0%, 0% 70%); */
         background-image: linear-gradient(to left top, rgba(251, 144, 5, 0.57), rgba(43, 35, 113, 0.561)), url(../images/background.jpeg);
         background-size: cover;
@@ -169,10 +169,10 @@
     }
 
     .header__text-box {
-        position: absolute;
+        /* position: absolute;
         top: 32%;
         left: 40%;
-        text-align: center;
+        text-align: center; */
     }
 
     .heading-primary--main {
