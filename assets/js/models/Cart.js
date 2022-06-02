@@ -20,7 +20,8 @@ function updateCartItems(item, itemsInCart) {   //function to update cart list
     cartItems.push(itemsInCart);
 }
 function updateCartView() { //function to update cart view in HTML
-    if (cartItems.length >= 0) { //This checks if the cart is empt so it can hide the procced to check out button and the total
+    if (cartItems.length > 0) { //This checks if the cart is empt so it can hide the procced to check out button and the total
+        document.querySelector('.sumandcheckout').style.display = '';
         let result = cartItems.map(product => {
             return `
             <div class="order-card"><img class="order-img" src="${product.image}" alt="" srcset="">
@@ -32,7 +33,7 @@ function updateCartView() { //function to update cart view in HTML
             </div>
             </div>`
         })
-        cart.innerHTML = result.join('')
+        cart.innerHTML = result.join(' ')
     }
     else {
         console.log('cruise');

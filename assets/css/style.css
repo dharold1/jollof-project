@@ -382,7 +382,9 @@ body {
   display: grid;
   grid-template-columns: auto;
 }
-
+.delivery-card label{
+  font-size: 1.5rem;
+}
 .delivery-card input {
   height: 3rem;
   border-style: groove;
@@ -396,9 +398,15 @@ body {
 
 .payment {
   position: fixed;
-  width: 12rem;
+  width: 180px;
   bottom: -5rem;
   right: 2rem;
+}
+.backtocart{
+  position: fixed;
+  width: 180px;
+  bottom: -5rem;
+  left: 2rem;
 }
 
 #overlay {
@@ -452,6 +460,8 @@ body {
 .btn--color2 {
   background-color: #bb9b3d;
   border-color: #312910ec;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .btn--color2:hover {
