@@ -8,6 +8,20 @@
 1200px  = 75em
 1800px 112.5em
 */
+@font-face {
+    font-family: lato;
+    src: url(../fonts/Lato/Lato-Black.ttf);
+  }
+  
+  @font-face {
+    font-family: monoton;
+    src: url(../fonts/monoton/Monoton-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: jokerman;
+    src: url(../fonts/Jokerman-Font/Jokerman-Font.ttf);
+  }
 
 @media screen and (max-width: 75em) {
     html {
