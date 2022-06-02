@@ -8,20 +8,7 @@
 1200px  = 75em
 1800px 112.5em
 */
-@font-face {
-    font-family: lato;
-    src: url(../fonts/Lato/Lato-Black.ttf);
-  }
-  
-  @font-face {
-    font-family: monoton;
-    src: url(../fonts/monoton/Monoton-Regular.ttf);
-  }
-  
-  @font-face {
-    font-family: jokerman;
-    src: url(../fonts/Jokerman-Font/Jokerman-Font.ttf);
-  }
+
 
 @media screen and (max-width: 75em) {
     html {
@@ -127,7 +114,7 @@
 
     /* ==============================CONTACT===================================== */
     .contact {
-        height: 40vh;
+        height: 50vh;
     }
 
     .contact__row {
@@ -137,11 +124,12 @@
     }
 
     .col-1-of-4 h5 {
-        font-size: 1.7rem;
+        font-size: 3rem;
     }
 
     .col-1-of-4 li a {
-        font-size: 1.5rem;
+        font-size: 2.3rem;
+        color: rgba(41, 41, 41, 0.935);
     }
 
 }
@@ -226,7 +214,7 @@
     }
 
     .contact {
-        height: 60vh;
+        height: 50vh;
     }
     .contact__row {
         /* margin-top: 3%; */

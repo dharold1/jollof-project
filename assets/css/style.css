@@ -248,7 +248,7 @@ body {
   font-weight: 100;
 }
 
-.col-1-of-4 li a:hover {
+.col-1-of-4 li a:hover, .col-1-of-4 li a:active, .col-1-of-4 li a:focus{
   color: #1c1b1b;
 }
 
