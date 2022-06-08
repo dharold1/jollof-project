@@ -1,5 +1,8 @@
 //item.children[0]this brings out the content of the first child in the div that has an id of item  the .src brings out the source of the image
 let cartItems = []
+let mainCartItems= JSON.parse(localStorage.getItem('FoodCart'));
+console.log(mainCartItems)
+
 const cart = document.querySelector('.cart-container');
 let countValue = document.querySelector('.count-value');
 
@@ -8,21 +11,24 @@ function calcSumPrice() {
     
 }
 function updateCartItems(item, itemsInCart) {   //function to update cart list
-    for (let i = 0; i < cartItems.length; i++) {
-        if (cartItems[i].productId == item.id) {  //check if the cartitem is already in the list so it wont create another product with same content instead it increases the count
-            cartItems[i].count += 1;
-            cartItems[i].price = cartItems[i].count * cartItems[i].basePrice; //calculates the price per count increase
-
+    
+    for (let i = 0; i < mainCartItems.length; i++) {
+        if (mainCartItems[i].productId == item.id) {  //check if the cartitem is already in the list so it wont create another product with same content instead it increases the count
+            mainCartItems[i].count += 1;
+            mainCartItems[i].price = cartItems[i].count * cartItems[i].basePrice; //calculates the price per count increase
             return
         }
     }
     
     cartItems.push(itemsInCart);
 }
+
 function updateCartView() { //function to update cart view in HTML
-    if (cartItems.length > 0) { //This checks if the cart is empt so it can hide the procced to check out button and the total
+    localStorage.setItem('FoodCart', JSON.stringify(cartItems))
+
+    if (mainCartItems.length > 0) { //This checks if the cart is empty so it can hide the procced to check out button and the total
         document.querySelector('.sumandcheckout').style.display = '';
-        let result = cartItems.map(product => {
+        let result = mainCartItems.map(product => {
             return `
             <div class="order-card"><img class="order-img" src="${product.image}" alt="" srcset="">
             <div class="order-detail">

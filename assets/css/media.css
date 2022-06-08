@@ -48,7 +48,7 @@
     }
 
     /* =======================about==================== */
-    .about {
+    /* .about {
         position: relative;
         min-height: 50vh;
         background-image: linear-gradient(rgba(225, 225, 225, 0.556), rgba(225, 225, 225, 0.556));
@@ -65,7 +65,7 @@
     .about__content__text {
         font-size: 2.5rem;
         padding: 0 16rem;
-    }
+    } */
 
     /* =======/====================MENU CSS ==================================== */
     .menu {
@@ -124,11 +124,11 @@
     }
 
     .col-1-of-4 h5 {
-        font-size: 3rem;
+        /* font-size: 3rem; */
     }
 
     .col-1-of-4 li a {
-        font-size: 2.3rem;
+        /* font-size: 2.3rem; */
         color: rgba(41, 41, 41, 0.935);
     }
 
